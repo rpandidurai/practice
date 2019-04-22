@@ -52,10 +52,10 @@ class A implements Serializable
 	private int id;
 	private static String name;
 	
-	public Object readResolve();
-	{
-		return this;
-	}
+//	public Object readResolve();
+//	{
+//		return this;
+//	}
 	
 	public A() {
 		System.out.println("A instantiated...");
