@@ -32,7 +32,6 @@ public class ObjectCreation {
 		System.out.println(s1);
 		
 		// Class.forName
-		
 		try {
 			
 			Student s2 = (Student) Class.forName("ps.iv.objectcreation.Student").newInstance();

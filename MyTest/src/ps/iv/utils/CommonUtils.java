@@ -20,8 +20,7 @@ public final class CommonUtils {
 		{
 			Exception e = new IllegalArgumentException("Null not allowed as parameter...");
 			//Log it
-		}
-		
+		}		
 		return reference;
 	}
 	
@@ -110,11 +109,11 @@ public final class CommonUtils {
 			result[i] = sum % 10;
 		}
 		
-		if (carry == 1) {
+		if (carry == 1) 
+		{
 			result = new int[length+1];
 			result[0]= 1;
 		}
-			
 		
 		return result;
 	}
@@ -130,7 +129,7 @@ public final class CommonUtils {
 			sum = n1+n2;
 			n1 = n2;
 			n2 = sum;
-		}
-		
+		}		
 	}
+	
 }

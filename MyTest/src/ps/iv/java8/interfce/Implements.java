@@ -27,7 +27,9 @@ public class Implements implements A, B, C {
 	
 	public static void main(String[] args) {
 		Implements c = new Implements();
+		A a = new Implements();
 		System.out.println(c.getName());
+		System.out.println(a.getName());
 		System.out.println(c.multiply(10.3335675675672312312312d, 30.66645645654523542345345d));
 		System.out.println(c.multiply1(10.3335675675672312312312d, 30.66645645654523542345345d));
 	}

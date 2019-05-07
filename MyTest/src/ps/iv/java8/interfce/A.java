@@ -10,6 +10,8 @@ package ps.iv.java8.interfce;
 public interface A {
 
 	String name = "Interface A";
+//	public static String getN(); // compile error
+	
 	public strictfp default String getName()
 	{
 		return "A";

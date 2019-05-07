@@ -24,9 +24,9 @@ public class MyThread {
 		{
 //			System.out.print(CA[i]);
 			IA[CA[i]] = i;
-			System.out.println(IA[CA[i]]);
+//			System.out.println(IA[CA[i]]);
 		}
-		System.out.println();
+//		System.out.println();
 		IA['='] = 0;
 	}
 	
@@ -55,17 +55,19 @@ public class MyThread {
 	 * @param args
 	 */
 	public static volatile int vValue = 1;
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
-		System.out.println(createUUIDString());
+//		System.out.println(createUUIDString());
 		// TODO Auto-generated method stub
-		/*ThreadA a = new ThreadA();
+		ThreadA a = new ThreadA();
 		a.start();
 		
 		RunnableThread r = new RunnableThread();
 		
 		Thread rt = new Thread(r);
-		rt.start();*/
+		rt.start();
+		a.join();
+		rt.join();
 	}
 
 }
