@@ -7,8 +7,17 @@ package ps.iv;
  * @author e3025685
  *
  */
-public class MyBlockLevelTest {
+public class MyBlockLevelTest extends BA {
 	
+	MyBlockLevelTest()
+	{
+		System.out.println("MyBlockLevelTest()");
+	}
+	
+	MyBlockLevelTest(int a)
+	{
+		System.out.println("MyBlockLevelTest(int a)");
+	}
 	static int sa;
 	int a;
 	
@@ -32,10 +41,10 @@ public class MyBlockLevelTest {
 	public static void main(String[] args) 
 	{
 		System.out.println("Main method");
-		MyBlockLevelTest obj = new MyBlockLevelTest();
-		obj.a = 90;
-		sa = 80;
-		new MyBlockLevelTest();
+//		MyBlockLevelTest obj = new MyBlockLevelTest();
+//		obj.a = 90;
+//		sa = 80;
+		new MyBlockLevelTest(12);
 //		obj.b = 90; // error
 
 	}
@@ -44,5 +53,43 @@ public class MyBlockLevelTest {
 
 class A
 {
+	private A(){
+		System.out.println("A()");
+	}
 	
+	A (int a){
+		
+	}
+	
+	static
+	{
+		System.out.println("class A static block");
+	}
+	
+	{
+		System.out.println("class A object block");
+	}
+}
+
+class BA extends A
+{
+	BA(){
+		super(12);
+		System.out.println("BA()");
+	}
+	
+	BA(int a)
+	{
+		super(13);
+		System.out.println("BA(int a)");
+	}
+	static
+	{
+		System.out.println("class BA static block");
+	}
+	
+	{
+		System.out.println("class BA object block");
+	}
+		
 }

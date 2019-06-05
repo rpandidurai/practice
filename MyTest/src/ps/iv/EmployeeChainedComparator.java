@@ -36,4 +36,26 @@ public class EmployeeChainedComparator implements Comparator<Employee> {
 		}
 		return 0;
 	}
+	
+	public void testOverload(Object obj)
+	{
+		System.out.println("Object ");
+	}
+	
+	public void testOverload(String str)
+	{
+		System.out.println("String ");
+	}
+	
+	public void testOverload(Long t)
+	{
+		System.out.println("EmployeeChainedComparator ");
+	}
+	
+	
+	
+	public static void main (String[] args)
+	{
+		new EmployeeChainedComparator().testOverload(2);
+	}
 }

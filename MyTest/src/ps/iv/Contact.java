@@ -16,6 +16,11 @@ public class Contact implements Comparable<Contact> {
 	    this.name = name;
 	    this.city = city;
 	  }
+	  
+	  public Contact()
+	  {
+		  
+	  }
 
 	 /* @Override
 	  public int compareTo(Contact contact) {
