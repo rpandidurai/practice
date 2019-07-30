@@ -7,28 +7,29 @@ import java.util.HashMap;
 
 /**
  * @author e3025685
+ * @param <K>
  *
  */
-public class LRUCache {
+public class LRUCache<K> {
 
-	HashMap<Integer, Node> map = null;
+	HashMap<Integer, Node<Integer, Integer>> map = null;
 	static final int capacity = 3;
 	
-	Node head = null;
-	Node tail = null;
+	Node<Integer, Integer> head = null;
+	Node<Integer, Integer> tail = null;
 	
 	public LRUCache() {
-		this.map = new HashMap<Integer, Node>();
+		this.map = new HashMap<Integer, Node<Integer, Integer>>();
 	}
 	
 	
-	public int get(int key)
+	public Integer get(int key)
 	{
 		if(!map.containsKey(key))
 		{
 			return -1;
 		}
-		Node t = map.get(key);
+		Node<Integer, Integer> t = map.get(key);
 		
 		remove(t);
         setHead(t);
@@ -40,7 +41,7 @@ public class LRUCache {
 	{
 		if(map.containsKey(key))
 	        {
-	            Node t = map.get(key);
+	            Node<Integer, Integer> t = map.get(key);
 	            t.value = value;
 	 
 	            remove(t);
@@ -54,7 +55,7 @@ public class LRUCache {
 	                remove(tail);
 	            }
 	 
-	            Node t = new Node(key, value);
+	            Node<Integer, Integer> t = new Node<Integer, Integer>(key, value);
 	            setHead(t);
 	            map.put(key, t);
 	        }

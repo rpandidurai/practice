@@ -6,7 +6,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class MapModification {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Map<Integer, String> hm = new HashMap<>();
 		
 		putValues(hm);

@@ -7,22 +7,21 @@ package ps.iv.lru.cache;
  * @author e3025685
  *
  */
-public class Node {
+public class Node<K, V> {
 
-	int key;
-	int value;
+	K key;
+	V value;
 	
-	Node prev;
-	Node next;
+	Node<K, V> prev;
+	Node<K, V> next;
 	
-	public Node(int key, int value) {		
-		this.key = key;
-		this.value = value;
+	public Node(K k, V v) {		
+		this.key = k;
+		this.value = v;
 	}
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return key + " " + value;
 	}
 }

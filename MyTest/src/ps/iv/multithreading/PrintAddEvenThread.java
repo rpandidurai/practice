@@ -3,7 +3,7 @@ package ps.iv.multithreading;
 public class PrintAddEvenThread extends Thread
 {
 	private static int totalCount = 10;
-	private static int number = 1;	
+	private volatile static int number = 1;	
 	
 	private static String obj = new String();
 	
@@ -26,6 +26,10 @@ public class PrintAddEvenThread extends Thread
 					{		
 						obj.wait();
 					}
+					else
+					{
+						obj.notify();
+					}
 					number++;
 				}
 				catch (Exception e)
@@ -37,7 +41,7 @@ public class PrintAddEvenThread extends Thread
 //					return;
 //				}
 				
-				obj.notify();
+//				obj.notify();
 			}	
 		}			
 	}
